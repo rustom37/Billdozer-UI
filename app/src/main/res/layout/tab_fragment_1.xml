@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TableLayout
+        android:id="@+id/tl"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center">
+        android:layout_height="fill_parent"
+        android:gravity="center" >
 
         <TableRow
             android:id="@+id/tableRow1"
-            android:layout_width="@dimen/box_size"
-            android:layout_height="@dimen/box_size"
-            android:gravity="center">
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center" >
 
             <Button
                 android:id="@+id/button1"
                 android:layout_weight="1"
-                android:text="1"/>
+                android:text="1" />
 
             <Button
                 android:id="@+id/button2"
@@ -32,22 +34,22 @@
 
         <TableRow
             android:id="@+id/tableRow2"
-            android:layout_width="@dimen/box_size"
-            android:layout_height="@dimen/box_size"
-            android:gravity="center">
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_weight="1"
-                android:text="4"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
 
             <Button
                 android:id="@+id/button5"
                 android:layout_weight="1"
-                android:text="5" />
+                android:text="4" />
 
             <Button
                 android:id="@+id/button6"
+                android:layout_weight="1"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/button7"
                 android:layout_weight="1"
                 android:text="6" />
         </TableRow>

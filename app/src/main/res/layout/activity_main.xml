@@ -9,9 +9,10 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="billdozer.com.testxml.MainActivity">
 
-    <fragment
+   <!-- <fragment
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/landscape_fragment"
@@ -21,6 +22,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/portrait_fragment"
-        android:name="billdozer.com.testxml.FragmentPortrait" />
+        android:name="billdozer.com.testxml.FragmentPortrait" /> -->
 
+    <billdozer.com.testxml.stab.SlidingTabLayout
+        android:id="@id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabDots"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@drawable/tab_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"/>
 </RelativeLayout>

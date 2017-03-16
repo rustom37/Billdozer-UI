@@ -1,6 +1,0 @@
-<framelayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="#32383d">
-    <!-- ViewPager -->
-    <!-- Footer -->
-    <android.support.v4.view.viewpager android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/imageviewPager">
-        <include layout="@layout/footer">
-        </include></android.support.v4.view.viewpager></framelayout>
