@@ -19,17 +19,17 @@
             <Button
                 android:id="@+id/button1"
                 android:layout_weight="1"
-                android:text="1" />
+                android:text="@string/_1" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_weight="1"
-                android:text="2" />
+                android:text="@string/_2" />
 
             <Button
                 android:id="@+id/button3"
                 android:layout_weight="1"
-                android:text="3" />
+                android:text="@string/_3" />
         </TableRow>
 
         <TableRow
@@ -41,17 +41,17 @@
             <Button
                 android:id="@+id/button5"
                 android:layout_weight="1"
-                android:text="4" />
+                android:text="@string/_4" />
 
             <Button
                 android:id="@+id/button6"
                 android:layout_weight="1"
-                android:text="5" />
+                android:text="@string/_5" />
 
             <Button
                 android:id="@+id/button7"
                 android:layout_weight="1"
-                android:text="6" />
+                android:text="@string/_6" />
         </TableRow>
     </TableLayout>
 
