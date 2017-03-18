@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 
-import billdozer.com.testxml.stab.SlidingTabLayout;
+import io.github.kshitij_jain.indicatorview.IndicatorView;
 
 /*
 Fragments make it easy to create interfaces that work on different
@@ -24,6 +24,8 @@ your libs folder )
 
 public class MainActivity extends FragmentActivity{
 
+    private static int currentpage = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -31,17 +33,48 @@ public class MainActivity extends FragmentActivity{
         setContentView(R.layout.activity_main);
 
         // Layout manager that allows the user to flip through the pages
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 
         // getSupportFragmentManager allows use to interact with the fragments
         // MyFragmentPagerAdapter will return a fragment based on an index that is passed
         viewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager(),
                 MainActivity.this));
 
-        // Initialize the Sliding Tab Layout
-        SlidingTabLayout slidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
+        final IndicatorView indicator = (IndicatorView) findViewById(R.id.circle_indicator_view);
+        indicator.setPageIndicators(2);
 
-        // Connect the viewPager with the sliding tab layout
-        slidingTabLayout.setViewPager(viewPager);
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener(){
+
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                if(state == ViewPager.SCROLL_STATE_IDLE)
+                {
+                   int pagecount = 2;
+                    if(currentpage == 0)
+                    {
+                        viewPager.setCurrentItem(pagecount-1, false);
+                        indicator.setActiveIndicatorColor(R.color.active_indicator);
+                        indicator.setInactiveIndicatorColor(R.color.inactive_indicator);
+                    }
+                    else if(currentpage == pagecount -1)
+                    {
+                       viewPager.setCurrentItem(0, false);
+                        indicator.setActiveIndicatorColor(R.color.active_indicator);
+                        indicator.setInactiveIndicatorColor(R.color.inactive_indicator);
+                    }
+                }
+
+            }
+        });
     }
 }
