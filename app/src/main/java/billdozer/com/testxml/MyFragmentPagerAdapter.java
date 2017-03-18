@@ -6,8 +6,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    // Holds tab titles
-    private String tabTitles[] = new String[] { "Frag #1", "Frag #2"};
     private Context context;
 
     public MyFragmentPagerAdapter(FragmentManager fm, Context context) {
@@ -30,11 +28,5 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
         }
 
         return null;
-    }
-
-    @Override
-    public CharSequence getPageTitle(int position) {
-        // Return the tab title to SlidingTabLayout
-        return tabTitles[position];
     }
 }

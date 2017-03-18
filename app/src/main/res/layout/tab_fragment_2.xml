@@ -16,43 +16,32 @@
             android:layout_height="fill_parent"
             android:gravity="center" >
 
-            <Button
-                android:id="@+id/button1"
+            <ImageButton
+                android:id="@+id/education_btn"
                 android:layout_weight="1"
-                android:text="@string/_7" />
+                android:src="@drawable/education_icon"
+                android:background="#ffff"/>
 
-            <Button
-                android:id="@+id/button2"
+            <ImageButton
+                android:id="@+id/car_btn"
                 android:layout_weight="1"
-                android:text="@string/_8" />
+                android:background="#ffff"
+                android:src="@drawable/car_icon" />
 
-            <Button
-                android:id="@+id/button3"
+            <ImageButton
+                android:id="@+id/entertainment_btn"
                 android:layout_weight="1"
-                android:text="@string/_9" />
+                android:background="#ffff"
+                android:src="@drawable/entertainment_icon" />
+
+
+            <ImageButton
+                android:id="@+id/addnew_btn"
+                android:layout_weight="1"
+                android:src="@drawable/addnew_icon"
+                android:background="#ffff"/>
         </TableRow>
 
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center" >
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_weight="1"
-                android:text="@string/_10" />
-
-            <Button
-                android:id="@+id/button6"
-                android:layout_weight="1"
-                android:text="@string/_11" />
-
-            <Button
-                android:id="@+id/button7"
-                android:layout_weight="1"
-                android:text="@string/_12" />
-        </TableRow>
     </TableLayout>
 
 

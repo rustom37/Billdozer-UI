@@ -14,7 +14,7 @@ public class SplashScreen extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_screen);
 
-        ImageView iv = (ImageView)findViewById(R.id.imageView2);
+        ImageView iv = (ImageView)findViewById(R.id.icon_logo);
         iv.setBackgroundResource(R.drawable.logo);
 
         new Handler().postDelayed(new Runnable(){
