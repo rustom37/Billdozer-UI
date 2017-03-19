@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -39,13 +40,12 @@ your libs folder )
 public class MainActivity extends FragmentActivity implements View.OnClickListener, OnFragmentButtonClick{
 
     private static int currentpage = 0;
-    ImageButton datePicker;
-    EditText txtDate;
-    EditText descrip;
+    ImageButton datePicker, deleteBtn;
+    EditText txtDate, descrip, amount;
     ToggleButton btn;
     TextView text;
     ImageView img;
-    Button button;
+    Button button, b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, decimalBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,10 +60,35 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         text = (TextView)findViewById(R.id.textView);
         img = (ImageView)findViewById(R.id.boxicon);
         button = (Button)findViewById(R.id.button);
+        deleteBtn = (ImageButton)findViewById(R.id.button_delete);
+        amount = (EditText) findViewById(R.id.editText);
+        b1 = (Button)findViewById(R.id.button1);
+        b2 = (Button)findViewById(R.id.button2);
+        b3 = (Button)findViewById(R.id.button3);
+        b4 = (Button)findViewById(R.id.button4);
+        b5 = (Button)findViewById(R.id.button5);
+        b6 = (Button)findViewById(R.id.button6);
+        b7 = (Button)findViewById(R.id.button7);
+        b8 = (Button)findViewById(R.id.button8);
+        b9 = (Button)findViewById(R.id.button9);
+        b0 = (Button)findViewById(R.id.button0);
+        decimalBtn = (Button)findViewById(R.id.button_decimal);
 
         datePicker.setOnClickListener(this);
         txtDate.setOnClickListener(this);
         button.setOnClickListener(this);
+        deleteBtn.setOnClickListener(this);
+        b1.setOnClickListener(this);
+        b2.setOnClickListener(this);
+        b3.setOnClickListener(this);
+        b5.setOnClickListener(this);
+        b4.setOnClickListener(this);
+        b6.setOnClickListener(this);
+        b7.setOnClickListener(this);
+        b8.setOnClickListener(this);
+        b9.setOnClickListener(this);
+        b0.setOnClickListener(this);
+        decimalBtn.setOnClickListener(this);
 
         // Layout manager that allows the user to flip through the pages
         final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
@@ -134,81 +159,160 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             datePickerDialog.show();
         }
 
+        if(v == b0)
+        {
+            Editable s = amount.getText();
+           amount.setText(s.toString() + "0");
+        }
+
+        if(v == b1)
+        {
+            Editable s = amount.getText();
+            amount.setText(s.toString() + "1");
+        }
+
+        if(v == b2)
+        {
+            Editable s = amount.getText();
+            amount.setText(s.toString() + "2");
+        }
+
+        if(v == b3)
+        {
+            Editable s = amount.getText();
+            amount.setText(s.toString() + "3");
+        }
+
+        if(v == b4)
+        {
+            Editable s = amount.getText();
+            amount.setText(s.toString() + "4");
+        }
+
+        if(v == b5)
+        {
+            Editable s = amount.getText();
+            amount.setText(s.toString() + "5");
+        }
+
+        if(v == b6)
+        {
+            Editable s = amount.getText();
+            amount.setText(s.toString() + "6");
+        }
+
+        if(v == b7)
+        {
+            Editable s = amount.getText();
+            amount.setText(s.toString() + "7");
+        }
+
+        if(v == b8)
+        {
+            Editable s = amount.getText();
+            amount.setText(s.toString() + "8");
+        }
+
+        if(v == b9)
+        {
+            Editable s = amount.getText();
+            amount.setText(s.toString() + "9");
+        }
+
+        if(v == deleteBtn)
+        {
+            if(amount.getText().equals(null)) { //HAVING PROBLEM HERE
+               amount.setText("");
+            }
+            else
+            {
+                amount.setText(amount.getText().delete(amount.getText().length() - 1, amount.getText().length()));
+            }
+
+        }
+
+        if(v == decimalBtn)
+        {
+            Editable s = amount.getText();
+            amount.setText(s.toString() + ".");
+        }
+
+
         if(v == button)
         {
-
+            double d = Double.parseDouble(amount.getText().toString());
         }
     }
 
     @Override
-    public void onFragmentChoose(String category) {
-        if(category == "food")
+    public void onFragmentChoose(String category) { //HAVING PROBLEM HERE
+        if(category.equals("food"))
         {
             text.setText("Food");
             text.setTextColor(Integer.parseInt("#951b81"));
             img.setImageResource(R.drawable.food_logo);
         }
-        else if(category == "shopping")
+        else if(category.equals("shopping"))
         {
             text.setText("Shopping");
             text.setTextColor(Integer.parseInt("#951b81"));
             img.setImageResource(R.drawable.shopping_logo);
         }
-        else if(category == "healthcare")
+        else if(category.equals("healthcare"))
         {
             text.setText("Healthcare");
             text.setTextColor(Integer.parseInt("#951b81"));
             img.setImageResource(R.drawable.healthcare_logo);
         }
-        else if(category == "home")
+        else if(category.equals("home"))
         {
             text.setText("Home");
             text.setTextColor(Integer.parseInt("#951b81"));
             img.setImageResource(R.drawable.home_logo);
         }
-        else if(category == "travel")
+        else if(category.equals("travel"))
         {
             text.setText("Travel");
             text.setTextColor(Integer.parseInt("#951b81"));
             img.setImageResource(R.drawable.travel_logo);
         }
-        else if(category == "family")
+        else if(category.equals("family"))
         {
             text.setText("Family");
             text.setTextColor(Integer.parseInt("#951b81"));
             img.setImageResource(R.drawable.family_logo);
         }
-        else if(category == "groceries")
+        else if(category.equals("groceries"))
         {
             text.setText("Groceries");
             text.setTextColor(Integer.parseInt("#951b81"));
             img.setImageResource(R.drawable.groceries_logo);
         }
-        else if(category == "bills")
+        else if(category.equals("bills"))
         {
             text.setText("Bills");
             text.setTextColor(Integer.parseInt("#951b81"));
             img.setImageResource(R.drawable.bills_logo);
         }
-        else if(category == "education")
+        else if(category.equals("education"))
         {
             text.setText("Education");
             text.setTextColor(Integer.parseInt("#951b81"));
             img.setImageResource(R.drawable.education_logo);
         }
-        else if(category == "car")
+        else if(category.equals("car"))
         {
             text.setText("Car");
             text.setTextColor(Integer.parseInt("#951b81"));
             img.setImageResource(R.drawable.car_logo);
         }
-        else if(category == "entertainment")
+        else if(category.equals("entertainment"))
         {
             text.setText("Entertainment");
             text.setTextColor(Integer.parseInt("#951b81"));
             img.setImageResource(R.drawable.entertainment_logo);
         }
-        else if(category == "addnew")
+        else if(category.equals("addnew"))
         {
             text.setText("New Category");
             text.setTextColor(Integer.parseInt("#951b81"));

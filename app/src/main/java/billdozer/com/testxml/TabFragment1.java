@@ -40,7 +40,7 @@ public class TabFragment1 extends Fragment implements View.OnClickListener {
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View v) { //Have Bug here
         switch (v.getId())
         {
             case R.id.food_btn:

@@ -32,7 +32,7 @@ public class TabFragment2 extends Fragment implements View.OnClickListener{
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View v) { //Have bug here
 
         switch (v.getId())
         {

@@ -15,7 +15,7 @@
         android:background="#ffffff"
         android:padding="4dp"
         tools:ignore="ContentDescription"
-        android:layout_above="@+id/modifyicon"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -87,17 +87,22 @@
         android:layout_toEndOf="@+id/boxicon" />
 
     <ToggleButton
+        android:layout_marginTop="5dp"
         android:id="@+id/toggleButton"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="40dp"
+        android:background="@drawable/button_capsule"
+        android:textSize="12dp"
+        android:textColor="#ffff"
         android:textOn="Expense"
         android:textOff="Income"
-        android:layout_below="@+id/modifyicon"
+        android:layout_below="@+id/view2"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <LinearLayout
         android:id="@+id/layout_linear"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:layout_below="@id/toggleButton"
@@ -137,25 +142,15 @@
         android:layout_alignParentStart="true" />
 
     <EditText
-        android:id="@+id/textedit"
+        android:id="@+id/editText"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="Insert Amount"
-        android:layout_alignTop="@+id/view3"
+        android:hint="@string/insert_amount"
+        android:textColor="#b2b2b1"
+        android:textIsSelectable="true"
+        android:layout_alignBottom="@+id/ic_coins"
         android:layout_toRightOf="@+id/ic_coins"
         android:layout_toEndOf="@+id/ic_coins" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="120dp"
-        android:layout_height="30dp"
-        android:text="Save"
-        android:textColor="#ffff"
-        android:background="@drawable/button_capsule"
-        android:layout_above="@+id/gridLayout"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -163,54 +158,66 @@
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
         android:columnCount="3"
-        android:layout_below="@id/textedit"
+        android:layout_below="@id/editText"
         android:id="@+id/gridLayout">
 
         <Button android:id="@+id/button1"
             android:text="1"
+            android:background="@drawable/border_button_topleft"
             android:layout_width="60dp"
             android:layout_height="40dp"/>
         <Button android:id="@+id/button2"
             android:text="2"
+            android:background="@drawable/border_button"
             android:layout_width="60dp"
             android:layout_height="40dp"/>
         <Button android:id="@+id/button3"
             android:text="3"
+            android:background="@drawable/border_button_topright"
             android:layout_width="60dp"
             android:layout_height="40dp"/>
         <Button android:id="@+id/button4"
             android:text="4"
+            android:background="@drawable/border_button"
             android:layout_width="60dp"
             android:layout_height="40dp"/>
         <Button android:id="@+id/button5"
             android:text="5"
+            android:background="@drawable/border_button"
             android:layout_width="60dp"
             android:layout_height="40dp"/>
         <Button android:id="@+id/button6"
             android:text="6"
+            android:background="@drawable/border_button"
             android:layout_width="60dp"
             android:layout_height="40dp"/>
         <Button android:id="@+id/button7"
             android:text="7"
+            android:background="@drawable/border_button"
             android:layout_width="60dp"
             android:layout_height="40dp"/>
         <Button android:id="@+id/button8"
             android:text="8"
+            android:background="@drawable/border_button"
             android:layout_width="60dp"
             android:layout_height="40dp"/>
         <Button android:id="@+id/button9"
             android:text="9"
-            android:layout_width="60dp"
-            android:layout_height="40dp"/>
-        <Button android:id="@+id/button0"
-            android:text="0"
+            android:background="@drawable/border_button"
             android:layout_width="60dp"
             android:layout_height="40dp"/>
         <Button android:id="@+id/button_decimal"
             android:text=","
+            android:background="@drawable/border_button_bottomleft"
+            android:layout_width="60dp"
+            android:layout_height="40dp"/>
+        <Button android:id="@+id/button0"
+            android:text="0"
+            android:background="@drawable/border_button"
             android:layout_width="60dp"
             android:layout_height="40dp"/>
         <ImageButton android:id="@+id/button_delete"
+            android:background="@drawable/border_button_bottomright"
             android:src="@drawable/delete_icon"
             android:layout_width="60dp"
             android:layout_height="40dp"/>
@@ -223,6 +230,17 @@
         android:layout_height="136dp"
         android:layout_below="@+id/boxicon"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/editText"
+        android:background="@drawable/button_capsule"
+        android:text="Save"
+        android:textColor="#ffff" />
 
 
 </RelativeLayout>
