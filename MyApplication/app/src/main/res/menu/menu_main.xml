@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/bottombaritem_transactions"
+        android:icon="@drawable/transaction_icon"
+        android:title="">
+        </item>
+
+    <item android:id="@+id/bottombaritemtwo"
+        android:icon="@drawable/ic_action_name"
+        android:title="Cards">
+    </item>
+
+    <item android:id="@+id/bottombaritemthree"
+        android:icon="@drawable/ic_action_name"
+        android:title="Phone">
+    </item>
+
+    <item android:id="@+id/bottombaritemfour"
+        android:icon="@drawable/ic_action_name"
+        android:title="Mails">
+    </item>
+
+    <item android:id="@+id/bottombaritemfive"
+        android:icon="@drawable/ic_action_name"
+        android:title="Favorites">
+    </item>
+
+</menu>
