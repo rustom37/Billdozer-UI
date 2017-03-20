@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#951b81"
+        android:id="@+id/view4" />
+
     <item android:id="@+id/bottombaritem_transactions"
         android:icon="@drawable/transaction_icon"
-        android:title="">
-        </item>
+        android:title=""/>
 
     <item android:id="@+id/bottombaritemtwo"
-        android:icon="@drawable/ic_action_name"
-        android:title="Cards">
+        android:icon="@drawable/overview_icon"
+        android:title="">
     </item>
 
     <item android:id="@+id/bottombaritem_add"
-        android:icon="@drawable/ic_action_name"
-        android:title="Phone">
+        android:icon="@drawable/plus_sign_icon"
+        android:title="">
     </item>
 
     <item android:id="@+id/bottombaritemfour"
-        android:icon="@drawable/ic_action_name"
-        android:title="Mails">
+        android:icon="@drawable/budgets_icon"
+        android:title="">
     </item>
 
     <item android:id="@+id/bottombaritemfive"
-        android:icon="@drawable/ic_action_name"
-        android:title="Favorites">
+        android:icon="@drawable/settings_icon"
+        android:title="">
     </item>
 
 </menu>

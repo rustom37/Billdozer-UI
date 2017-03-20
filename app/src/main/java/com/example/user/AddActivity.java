@@ -22,6 +22,7 @@ import android.widget.ToggleButton;
  * Created by User on 3/19/2017.
  */
 
+@SuppressWarnings("deprecation")
 public class AddActivity extends FragmentActivity implements View.OnClickListener, OnFragmentButtonClick{
 
     private static int currentpage = 0;
@@ -34,7 +35,6 @@ public class AddActivity extends FragmentActivity implements View.OnClickListene
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.transaction_reports);
 

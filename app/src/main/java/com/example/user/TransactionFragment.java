@@ -23,7 +23,7 @@ public class TransactionFragment extends Fragment {
         View v = inflater.inflate(R.layout.transaction_layout,container,false);
 
         String[] categoryNames = {"Shopping","Entertainment"};
-        Integer[] imgid = {R.drawable.shopping_cart_icon,R.drawable.entertainment_icon};
+        Integer[] imgid = {R.drawable.shopping_cart_icon,R.drawable.entertainment_ic};
         int[] transAmount = {-45000,-30000};
 
         int total = 0;

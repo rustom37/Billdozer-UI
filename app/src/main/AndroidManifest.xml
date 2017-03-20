@@ -7,7 +7,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Eggplant">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +17,7 @@
         </activity>
         <activity android:name=".AddActivity"
             android:label="add transaction"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/Eggplant"/>
     </application>
 
 </manifest>

@@ -8,19 +8,19 @@
         android:id="@+id/tl"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:gravity="center" >
+        android:gravity="center">
 
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:gravity="center" >
+            android:gravity="center">
 
             <ImageButton
                 android:id="@+id/education_btn"
                 android:layout_weight="1"
-                android:src="@drawable/education_icon"
-                android:background="#ffff"/>
+                android:background="#ffff"
+                android:src="@drawable/education_icon" />
 
             <ImageButton
                 android:id="@+id/car_btn"
@@ -38,8 +38,8 @@
             <ImageButton
                 android:id="@+id/addnew_btn"
                 android:layout_weight="1"
-                android:src="@drawable/addnew_icon"
-                android:background="#ffff"/>
+                android:background="#ffff"
+                android:src="@drawable/addnew_icon" />
         </TableRow>
 
     </TableLayout>
