@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">My Application</string>
-    <string name="wallet_balance">Wallet Balance</string>
-    <string name="this_month">This Month</string>
-    <string name="today">Today</string>
-</resources>
